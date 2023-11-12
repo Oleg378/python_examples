@@ -20,3 +20,6 @@ WHERE discontinued !=1
 GROUP BY category_name
 HAVING SUM(unit_price*units_in_stock) > 10000
 ORDER BY SUM(unit_price*units_in_stock) DESC;
+
+
+
