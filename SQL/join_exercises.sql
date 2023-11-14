@@ -4,7 +4,7 @@
 -- full name.
 
 SELECT customers.company_name,
-       first_name || ' ' || last_name as empl, -- or use CONCAT(first_name, ' ', last_name)
+       first_name || ' ' || last_name as employee, -- or use CONCAT(first_name, ' ', last_name)
        shippers.company_name
 FROM customers
 JOIN orders USING (customer_id)
