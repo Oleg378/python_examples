@@ -104,4 +104,12 @@ FROM products
 WHERE product_id in (SELECT product_id, quantity
                     FROM order_details
                     WHERE quantity = 10)
-ORDER BY product_name
+ORDER BY product_name;
+
+--the same:
+
+SELECT distinct product_name, quantity
+from products
+JOIN order_details using (product_id)
+where quantity = 10
+
